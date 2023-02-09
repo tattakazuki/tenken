@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="Untitled-2.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <div class="setubi_name">
+      <h1 class="setubi">4F　ごみクレーン</h1>
+    </div>
+    <div>
+      <h2>操作室</h2>
+    </div>
+
+    <table>
+      <th rowspan="4">操作室</th>
+      <tr>
+        <td class="tenken1" >ごみピットの状態</td>
+        <td class="tenken2" >
+          <button  class="yes_no_button" type="button" onclick=>良</button>
+        </td>
+        <td class="tenken3">
+          <button  class="yes_no_button" type="button" onclick=>否</button>          
+        </td>
+        <td class="tenken4">
+          <input type="text" class="txt" id="e">
+        </td>
+      </tr>
+      <tr>
+        <td class="tenken1" >放水銃制御盤の状態</td>
+        <td class="tenken2" >
+          <button  class="yes_no_button" type="button" onclick=>良</button>
+        </td>
+        <td class="tenken3">
+          <button  class="yes_no_button" type="button" onclick=>否</button>
+        </td>
+        <td class="tenken4">
+          <input type="text" class="txt" id="e">
+        </td>
+      </tr>
+      <tr>
+        <td class="tenken1" >室温</td>
+        <td class="tenken2" >
+          <p class="tekisei" >適正：5~30℃</p>
+          <input class="slider" type="range" step="1" min="0" max="50" id="Slider">
+        </td>
+        <td class="tenken3"> 
+          <p id="msg"　>　℃</p>
+        </td>
+        <td class="tenken4">
+          <input type="text" class="txt" id="e">
+        </td>
+      </tr>
+    </table>
+    <table>
+      <th rowspan="4">電気室</th>
+      <tr>
+        <td class="tenken1" >制御盤の状態</td>
+        <td class="tenken2" >
+          <button  class="yes_no_button" type="button" onclick=>良</button>
+        </td>
+        <td class="tenken3">
+          <button  class="yes_no_button" type="button" onclick=>否</button>
+        </td>
+        <td class="tenken4">
+          <input type="text" class="txt" id="e">
+        </td>
+      </tr>
+      <tr>
+        <td class="tenken1" >抵抗器の状態</td>
+        <td class="tenken2" >
+          <button  class="yes_no_button" type="button" onclick=>良</button>
+        </td>
+        <td class="tenken3">
+          <button  class="yes_no_button" type="button" onclick=>否</button>
+        </td>
+        <td class="tenken4">
+          <input type="text" class="txt" id="e">
+        </td>
+      </tr>
+    </table>
+    <h2></h2>
+    <div class="toggle_button">
+      <input id="toggle" class="toggle_input" type='checkbox' />
+      <label for="toggle" class="toggle_label">
+    </div>
+    <div>
+      <input type="text" id="e"><input type="text" id="input-message">
+    </div>
+
+    <script>
+      <!-- 良否判定 -->
+      function yesno(){
+        
+      }
+
+      <!-- スライダー -->
+      function inputChange(event){
+        msg.innerText = Slider.value + '℃';
+      }
+      let Slider = document.getElementById('Slider');
+      Slider.addEventListener('input', inputChange);
+      let msg = document.getElementById('msg');
+
+      const input = document.getElementById('input-message');
+      input.disabled = true;
+
+
+
+    </script>
+  </body>
+</html>
